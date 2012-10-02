@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<html lang="jp">
+<head>
+  <meta charset="UTF-8">
+  <title>タスクリスト - using backbone.js</title>
+  <link href="main.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div class="mod">
+  <h1 class="title">TaskList</h1>
+</div>
+
+<div class="mod">
+  <div class="table">
+    <div class="inputbox">
+      <input id="inputbox" type="text" placeholder="input your task"/>
+    </div>
+    <a id="regist-btn" href="#">登録</a>
+  </div>
+</div>
+
+<div class="mod">
+
+<ul class="tasklist">
+<li class="task table">
+  <input type="checkbox"/>
+  <div class="taskname">メールを送る</div>
+  <a href="#" class="clear">×</a>
+</li>
+</ul>
+</div>
+
+
+<div class="mod">
+<h3>Router Sample</h3>
+<a href="#foo/hogehoge" id="rTarget">Sample Hogehoge</a><br>
+</div>
+
+
+<!-- ブログ用 -->
+
+<style type="text/css">
+.table01 {margin: 10px 0px; border-collapse: collapse; font-size: 95%;}
+.table01 td , .table01 th {padding:3px;}
+.table01 td , .table01 th {border-bottom: 1px solid #a8af8e;}
+.table01 tr:last-child td {border-bottom: none;}
+</style>
+
+
+<p>■jQuery1.7.1.min.js（92.3KB）</p>
+<table class="table01">
+  <tr>
+    <th>回次</th>
+    <th>サーバー応答待ち(ms)</th>
+    <th>ダウンロード(ms)</th>
+    <th>合計(ms)</th>
+  </tr>
+  <tr>
+    <td>①</td>
+    <td>57.9</td>
+    <td>92.8</td>
+    <td><s>150.0</s></td>
+  </tr>
+  <tr>
+    <td>②</td>
+    <td>90.0</td>
+    <td><s>70.0</s></td>
+    <td>160.0</td>
+  </tr>
+  <tr>
+    <td>③</td>
+    <td>58.4</td>
+    <td>109.0</td>
+    <td>167.4</td>
+  </tr>
+  <tr>
+    <td>④</td>
+    <td>65.3</td>
+    <td>110.0</td>
+    <td>175.3</td>
+  </tr>
+  <tr>
+    <td>⑤</td>
+    <td>57.2</td>
+    <td><s>209.0</s></td>
+    <td><s>266.2</s></td>
+  </tr>
+  <tr>
+    <td colspan="2">平均</td>
+    <td>103.9</td>
+    <td>167.6</td>
+  </tr>
+</table>
+
+
+■zepto-0.6.min.js（13KB、単位：ミリ秒）
+<table class="table01">
+  <tr>
+    <th>回次</th>
+    <th>サーバー応答待ち(ms)</th>
+    <th>ダウンロード(ms)</th>
+    <th>合計(ms)</tH>
+  </tr>
+  <tr>
+    <td>①</td>
+    <td>56.0</td>
+    <td>42.0</td>
+    <td><s>98.0</s></td>
+  </tr>
+  <tr>
+    <td>②</td>
+    <td>70.2</td>
+    <td>36.1</td>
+    <td>106.3</td>
+  </tr>
+  <tr>
+    <td>③</td>
+    <td>73.1</td>
+    <td><s>47.2</s></td>
+    <td><s>120.3</s></td>
+  </tr>
+  <tr>
+    <td>④</td>
+    <td>83.6</td>
+    <td><s>32.4</s></td>
+    <td>116.0</td>
+  </tr>
+  <tr>
+    <td>⑤</td>
+    <td>54.6</td>
+    <td>45.0</td>
+    <td>99.6</td>
+  </tr>
+  <tr>
+    <td colspan="2">平均</td>
+    <td>41.0<span style="font-size:small;">(39.5%)</span></td>
+    <td>105.3<span style="font-size:small;">(62.8%)</span></td>
+  </tr>
+</table>
+
+■JavaScriptの評価時間（jQuery）
+<table class="table01">
+  <tr>
+    <th>回次</th>
+    <th>評価時間(ms)</th>
+  </tr>
+  <tr>
+    <td>①</td>
+    <td><s>44.1</s></td>
+  </tr>
+  <tr>
+    <td>②</td>
+    <td>50.3</td>
+  </tr>
+  <tr>
+    <td>③</td>
+    <td><s>55.7</s></td>
+  </tr>
+  <tr>
+    <td>④</td>
+    <td>51.3</td>
+  </tr>
+  <tr>
+    <td>⑤</td>
+    <td>53.1</td>
+  </tr>
+  <tr>
+    <td>合計</td>
+    <td>51.6</td>
+  </tr>
+</table>
+■JavaScriptの評価時間（Zepto）
+<table class="table01">
+  <tr>
+    <th>回次</th>
+    <th>評価時間(ms)</th>
+  </tr>
+  <tr>
+    <td>①</td>
+    <td><s>25.8</s></td>
+  </tr>
+  <tr>
+    <td>②</td>
+    <td>21.2</td>
+  </tr>
+  <tr>
+    <td>③</td>
+    <td>19.7</td>
+  </tr>
+  <tr>
+    <td>④</td>
+    <td><s>9.2</s></td>
+  </tr>
+  <tr>
+    <td>⑤</td>
+    <td>21.2</td>
+  </tr>
+  <tr>
+    <td>合計</td>
+    <td>20.7<span style="font-size:small;">(40.1%)</span></td>
+  </tr>
+</table>
+
+
+
+
+
+<!-- タスクリストのテンプレート -->
+<script type="text/template" id="tasklist-template">
+<li class="task table" data-pos="<%= pos %>">
+  <input type="checkbox"/>
+  <div class="taskname"><%= taskname %></div>
+  <a href="#" class="clear">×</a>
+</li>
+</script>
+
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> -->
+<script src="jquery-1.7.1.min.js"></script>
+<!-- <script src="zepto-0.6.min.js"></script> -->
+<script type="text/javascript" src="underscore.js"></script>
+<script type="text/javascript" src="backbone.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

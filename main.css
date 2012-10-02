@@ -1,0 +1,49 @@
+/**************************
+ Tasklist CSS
+***************************/
+* {padding:0; margin:0;}
+ul {list-style-type: none;}
+a {text-decoration: none;}
+.mod {width:90%; margin:10px auto; color: #99988A;}
+.title {text-align:center;}
+.table {display: table; width:100%;}
+.table .inputbox {
+}
+.table #inputbox {
+  display: table-cell;
+  height: 44px;
+  border-radius: 5px;
+  width: 90%;
+}
+.table #regist-btn {
+  display: table-cell;
+  height: 44px;
+  width: 80px;
+  line-height: 44px;
+  text-align: center;
+  color: #99988A;
+  border: 3px solid #afb98f;
+  border-radius: 22px;
+}
+.tasklist {
+  padding: 10px 0px;
+}
+.tasklist .task {
+  border-bottom: 1px solid #afb98f;
+  height: 44px;
+  line-height: 44px;
+}
+.task input[type=checkbox] {
+  display: table-cell;
+  width: 44px;
+}
+.task .taskname {
+  display: table-cell;
+  width: auto;
+  text-align:left;
+}
+.task .clear {
+  display: table-cell;
+  width: 44px;
+  text-align: center;
+}
